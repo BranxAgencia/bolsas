@@ -213,7 +213,21 @@ function abrirModal(index) {
     container.appendChild(img);
   });
 
-  document.getElementById("modal").classList.remove("hidden");
+  const modal = document.getElementById("modal");
+  const modalContent = document.getElementById("modal-content");
+
+  modal.classList.remove("hidden");
+  modalContent.classList.add("modal-enter");
+
+  // Trigger reflow to enable transition
+  void modalContent.offsetWidth;
+
+  modalContent.classList.add("modal-enter-active");
+
+  // Remove animation classes after transition
+  setTimeout(() => {
+    modalContent.classList.remove("modal-enter", "modal-enter-active");
+  }, 300);
 }
 
 function abrirImagemExpandida(src) {

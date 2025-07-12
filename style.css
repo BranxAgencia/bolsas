@@ -1,38 +1,38 @@
 img.w-full.h-48.object-cover.rounded-xl.mb-4 {
-    height: 400px;
+  height: 400px;
 }
 
 body {
-    font-family: "Young Serif", serif;
-    text-align: center;
-    color: #5c272f;
-    background-color: #ffced4 !important;
+  font-family: "Young Serif", serif;
+  text-align: center;
+  color: #5c272f;
+  background-color: #ffced4 !important;
 }
 
 .text-pink-600 {
-    font-family: "DM Serif Display", serif;
-    font-size: 20px;
+  font-family: "DM Serif Display", serif;
+  font-size: 20px;
 }
 
 .bg-white {
-    border: 4px solid #e973a3;
+  border: 4px solid #e973a3;
 }
 
 svg.bi.bi-instagram {
-    height: 21px;
-    width: 21px;
-    padding-top: 2px;
+  height: 21px;
+  width: 21px;
+  padding-top: 2px;
 }
 
 .flex.flex-col.items-center.mb-6 {
-    padding-top: 50px;
-    padding-bottom: 30px;
-    margin-bottom: 0 !important;
-    background-image: linear-gradient(to bottom, #ffffff, #ffced4);
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 0 !important;
+  background-image: linear-gradient(to bottom, #ffffff, #ffced4);
 }
 
 .text-gray-500 {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 div#modal-imagens {
@@ -42,8 +42,10 @@ div#modal-imagens {
   white-space: nowrap;
 
   /* aparência geral */
-  scrollbar-width: thin;            /* Firefox */
-  scrollbar-color: #f28ab2 #ffe4f0; /* Firefox */
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: #f28ab2 #ffe4f0;
+  /* Firefox */
 }
 
 /* Chrome, Edge, Safari */
@@ -52,24 +54,27 @@ div#modal-imagens::-webkit-scrollbar {
 }
 
 div#modal-imagens::-webkit-scrollbar-track {
-  background: #ffe4f0; /* trilha rosa clara */
+  background: #ffe4f0;
+  /* trilha rosa clara */
   border-radius: 10px;
 }
 
 div#modal-imagens::-webkit-scrollbar-thumb {
-  background-color: #f28ab2; /* polegar rosa médio */
+  background-color: #f28ab2;
+  /* polegar rosa médio */
   border-radius: 10px;
 }
 
 div#modal-imagens::-webkit-scrollbar-thumb:hover {
-  background-color: #e471a1; /* hover rosa mais escuro */
+  background-color: #e471a1;
+  /* hover rosa mais escuro */
 }
 
 .footer {
   background-color: #ffffff;
   color: #5c272f;
-  padding: 40px 20px;
   text-align: left;
+  border-top: solid 5px #ec4899;
 }
 
 .footer-container {
@@ -79,6 +84,7 @@ div#modal-imagens::-webkit-scrollbar-thumb:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
+  padding: 40px 20px 0px 20px;
 }
 
 .footer-col {
@@ -88,8 +94,9 @@ div#modal-imagens::-webkit-scrollbar-thumb:hover {
 
 .footer-col h2 {
   font-size: 18px;
-  margin-bottom: 10px;
   color: #e973a3;
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 3px;
 }
 
 .footer-col p {
@@ -117,7 +124,9 @@ div#modal-imagens::-webkit-scrollbar-thumb:hover {
   text-align: center;
   font-size: 13px;
   margin-top: 30px;
-  color: #aaa;
+  color: #000000;
+  padding: 20px;
+  background-color: #e5e7eb;
 }
 
 .social-icons a {
@@ -131,6 +140,49 @@ div#modal-imagens::-webkit-scrollbar-thumb:hover {
 }
 
 .social-icons {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    max-width: 1000px;
+  }
+
+  .footer-col {
+    flex: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #modal {
+    border-radius: 1rem;
+  }
+}
+
+#modal.modal-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+#modal.modal-enter-active {
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+
+button.absolute.top-4.right-6.text-3xl.text-gray-600 {
+  z-index: 50;
+  color: #fff;
+  background-color: #ec4899;
+  margin: 0 !important;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+
+@media (max-width: 768px) {
+  div#modal-content {
+    height: 100% !important;
+  }
 }
