@@ -75,6 +75,7 @@ div#modal-imagens::-webkit-scrollbar-thumb:hover {
   color: #5c272f !important;
   text-align: left;
   border-top: solid 5px #ec4899;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
