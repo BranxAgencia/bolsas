@@ -4,6 +4,7 @@ const produtos = [
     preco: "R$ 260,00",
     medidas: "Largura 34cm x Altura 32cm",
     imagens: [
+      "products/1 - Mochila 2 em 1 - a34xl32/capa1.jpg",
       "products/1 - Mochila 2 em 1 - a34xl32/capa.jpg",
       "products/1 - Mochila 2 em 1 - a34xl32/1.jpg",
       "products/1 - Mochila 2 em 1 - a34xl32/2.jpg",
@@ -22,6 +23,18 @@ const produtos = [
       "products/2 - Frasqueira luxo - a26xl23/1.jpg",
       "products/2 - Frasqueira luxo - a26xl23/2.jpg",
       "products/2 - Frasqueira luxo - a26xl23/3.jpg"
+    ]
+  },
+  {
+    nome: "Mochila de rodinhas",
+    preco: "R$ 600,00",
+    medidas: "Largura 21cm x Altura 50cm x Comprimento 38cm",
+    imagens: [
+      "products/8 - Mochila de rodinhas - a50xc38xl21/capa.jpg",
+      "products/8 - Mochila de rodinhas - a50xc38xl21/1.jpg",
+      "products/8 - Mochila de rodinhas - a50xc38xl21/2.jpg",
+      "products/8 - Mochila de rodinhas - a50xc38xl21/3.jpg",
+      "products/8 - Mochila de rodinhas - a50xc38xl21/4.jpg"
     ]
   },
   {
@@ -48,26 +61,30 @@ const produtos = [
     ]
   },
   {
+    nome: "Bolsa maternidade M",
+    preco: "R$ 240,00",
+    medidas: "Largura 14cm x Altura 25cm x Comprimento 38cm",
+    imagens: [
+      "products/5 - Bolsa maternidade M - a33xc42xl15/capa.jpg",
+      "products/5 - Bolsa maternidade M - a33xc42xl15/2.jpg",
+      "products/5 - Bolsa maternidade M - a33xc42xl15/3.jpg",
+      "products/5 - Bolsa maternidade M - a33xc42xl15/4.jpg"
+    ]
+  },
+  {
     nome: "Bolsa maternidade G",
     preco: "R$ 280,00",
     medidas: "Largura 15cm x Altura 33cm x Comprimento 42cm",
     imagens: [
-      "products/5 - Bolsa maternidade G - a33xc42xl15/capa.jpg",
-      "products/5 - Bolsa maternidade G - a33xc42xl15/2.jpg",
-      "products/5 - Bolsa maternidade G - a33xc42xl15/3.jpg",
-      "products/5 - Bolsa maternidade G - a33xc42xl15/4.jpg"
+      "products/6 - Bolsa G - a25xc38xl14/capa.jpg",
+      "products/6 - Bolsa G - a25xc38xl14/2.jpg",
+      "products/6 - Bolsa G - a25xc38xl14/3.jpg",
+      "products/6 - Bolsa G - a25xc38xl14/4.jpg",
+      "products/6 - Bolsa G - a25xc38xl14/5.jpg"
     ]
   },
   {
-    nome: "Bolsa M",
-    preco: "R$ 240,00",
-    medidas: "Largura 14cm x Altura 25cm x Comprimento 38cm",
-    imagens: [
-      "products/6 - Bolsa M - a25xc38xl14/capa.jpg"
-    ]
-  },
-  {
-    nome: "Bolsa P",
+    nome: "Bolsa maternidade P",
     preco: "R$ 210,00",
     medidas: "Largura 20cm x Altura 33cm",
     imagens: [
@@ -79,12 +96,14 @@ const produtos = [
     preco: "R$ 230,00",
     medidas: "Largura 28cm x Altura 32cm",
     imagens: [
-      "products/9 - Mochila tradicional - a32xl28/capa.jpg"
+      "products/9 - Mochila tradicional - a32xl28/capa.jpg",
+      "products/9 - Mochila tradicional - a32xl28/2.jpg",
+      "products/9 - Mochila tradicional - a32xl28/3.jpg"
     ]
   },
   {
     nome: "Nécessaire porta-lenço e fralda",
-    preco: "R$ 1100,00",
+    preco: "R$ 100,00",
     medidas: "Padrão",
     imagens: [
       "products/10 - Nécessaire porta-lenço e fralda/capa.jpg",
@@ -122,22 +141,28 @@ const produtos = [
   },
   {
     nome: "Kit organizador",
-    preco: "P-R$ 60,00/M-R$ 80,00/G-R$ 90,00",
+    preco: "P-R$ 70,00/M-R$ 80,00/G-R$ 90,00",
     medidas: "Padrão",
     imagens: [
+      "products/14 - Kit organizador/capa1.jpg",
       "products/14 - Kit organizador/capa.jpg",
       "products/14 - Kit organizador/1.jpg",
+      "products/14 - Kit organizador/22.jpg",
       "products/14 - Kit organizador/2.jpg",
       "products/14 - Kit organizador/3.jpg",
       "products/14 - Kit organizador/4.jpg"
     ]
   },
   {
-    nome: "Mala tradiciona",
+    nome: "Mala tradicional",
     preco: "R$ 280,00",
     medidas: "Largura 43cm x Altura 33cm",
     imagens: [
-      "products/15 - Mala tradicional - a33xl43/capa.jpg"
+      "products/15 - Mala tradicional - a33xl43/capa.jpg",
+      "products/15 - Mala tradicional - a33xl43/2.jpg",
+      "products/15 - Mala tradicional - a33xl43/3.jpg",
+      "products/15 - Mala tradicional - a33xl43/4.jpg",
+      "products/15 - Mala tradicional - a33xl43/5.jpg"
     ]
   },
   {
