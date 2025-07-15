@@ -201,7 +201,14 @@ produtos.forEach((p, index) => {
   const linkWhatsApp = `https://api.whatsapp.com/send/?phone=5585986500500&text=${encodeURIComponent(mensagem)}&type=phone_number&app_absent=0`;
 
   card.innerHTML = `
-   <img src="${p.imagens[0]}" class="w-full h-48 object-cover rounded-xl mb-4" alt="${p.nome}" />
+  <div class="relative">
+    <img src="${p.imagens[0]}" class="w-full h-48 object-cover rounded-xl mb-4" alt="${p.nome}" />
+    ${p.nome === "Mochila de rodinhas" ? `
+      <span class="absolute top-2 left-2 bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow flex items-center gap-1">
+        <svg id="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 453.54 432.96"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M222.28,10.72a16.3,16.3,0,0,0-9.43,6.63c-.68,1-10.78,21.34-22.51,45.12s-25.48,51.78-30.62,62.2l-9.36,19-7.79,1.14c-130.15,19.1-130,19.06-131.92,19.74a16.83,16.83,0,0,0-8.79,7.76,16,16,0,0,0,.64,16.09c.81,1.31,15.88,16.2,51.39,50.68,45,43.7,50.26,48.91,50.08,49.73-.07.49-1.38,7.9-2.84,16.48S97.2,328.11,95.64,337s-4.39,25.45-6.38,36.86-4.78,27.57-6.24,36C79.83,428,79.76,429.37,82,433.9a16.15,16.15,0,0,0,20.34,8.26c1.1-.46,29.63-15.31,63.37-33L227,377.05l28.5,14.89L317,424.09c18.14,9.49,33.77,17.54,34.73,17.86a20.46,20.46,0,0,0,9.5.1,17.67,17.67,0,0,0,9.82-8,18.81,18.81,0,0,0,1.77-7.51c0-1.14-1.46-10.35-3.19-20.49-4.89-28.18-9.25-53.37-13.15-76-2-11.31-4.4-25.38-5.42-31.26l-1.85-10.74,50.4-49.34c34.2-33.45,50.76-49.9,51.5-51.1a15.45,15.45,0,0,0,2.41-7.48A16.31,16.31,0,0,0,442,163.55c-1.14-.32-13.44-2.16-27.29-4.15l-50.51-7.08c-13.89-2-30.76-4.36-37.5-5.32s-14.85-2.06-18.07-2.52a34.31,34.31,0,0,1-6.28-1.17c-.21-.21-14.14-28.32-30.94-62.41S240.35,18,239.61,17a17.19,17.19,0,0,0-7.45-5.7A18.83,18.83,0,0,0,222.28,10.72Z" transform="translate(0 -10.29)"/></svg>
+        Popular
+      </span>` : ''}
+  </div>
   <h2 class="text-xl font-semibold">${p.nome}</h2>
   <p class="text-gray-500 text-sm mb-2">${p.medidas}</p>
   <p class="text-pink-600 font-bold mb-4">${p.preco}</p>

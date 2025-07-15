@@ -373,3 +373,11 @@ div#modal-imagens::-webkit-scrollbar-thumb {
     background-color: #f28ab2;  
     border-radius: 10px;
 }
+
+svg#star {
+    width: 10px;
+}
+
+span.absolute.top-2.left-2.bg-pink-500.text-white.text-xs.font-bold.px-2.py-1.rounded-full.shadow.flex.items-center.gap-1 {
+    background-color: #99c6e7;
+}
