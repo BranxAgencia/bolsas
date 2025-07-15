@@ -282,91 +282,96 @@ function fecharZoom() {
   document.getElementById("zoom-modal").classList.add("hidden");
 }
 
+const zoomModal = document.getElementById("zoom-modal");
+const zoomImg = document.getElementById("zoom-img");
+
+zoomModal.addEventListener("click", (e) => {
+  if (!zoomImg.contains(e.target)) {
+    fecharZoom();
+  }
+});
+
 function fecharModal() {
   document.getElementById("modal").classList.add("hidden");
 }
 
-  const track = document.getElementById('carouselTrack');
-  const prevBtn = document.getElementById('prevArrow');
-  const nextBtn = document.getElementById('nextArrow');
-  let currentSlide = 0;
-  const totalSlides = document.querySelectorAll('.carousel-slide').length;
+const track = document.getElementById('carouselTrack');
+const prevBtn = document.getElementById('prevArrow');
+const nextBtn = document.getElementById('nextArrow');
+let currentSlide = 0;
+const totalSlides = document.querySelectorAll('.carousel-slide').length;
 
-  function updateArrows() {
-    prevBtn.classList.toggle('hidden', currentSlide === 0);
-    nextBtn.classList.toggle('hidden', currentSlide === totalSlides - 1);
+function updateArrows() {
+  prevBtn.classList.toggle('hidden', currentSlide === 0);
+  nextBtn.classList.toggle('hidden', currentSlide === totalSlides - 1);
+}
+
+prevBtn.addEventListener('click', () => {
+  if (currentSlide > 0) {
+    currentSlide--;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    updateArrows();
   }
+});
 
-  prevBtn.addEventListener('click', () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-      track.style.transform = `translateX(-${currentSlide * 100}%)`;
-      updateArrows();
-    }
-  });
+nextBtn.addEventListener('click', () => {
+  if (currentSlide < totalSlides - 1) {
+    currentSlide++;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    updateArrows();
+  }
+});
 
-  nextBtn.addEventListener('click', () => {
-    if (currentSlide < totalSlides - 1) {
-      currentSlide++;
-      track.style.transform = `translateX(-${currentSlide * 100}%)`;
-      updateArrows();
-    }
-  });
+function playVideo(coverDiv) {
+  const wrapper = coverDiv.parentElement;
+  coverDiv.style.display = 'none';
 
-  function playVideo(coverDiv) {
-    const wrapper = coverDiv.parentElement;
-    coverDiv.style.display = 'none';
+  const iframe = wrapper.querySelector('iframe');
+  const src = iframe.src;
 
-    // For iframe Blogger autoplay workaround
-    const iframe = wrapper.querySelector('iframe');
+  if (!src.includes('autoplay=1')) {
+    const newSrc = src.includes('?') ? src + '&autoplay=1' : src + '?autoplay=1';
+    iframe.src = newSrc;
+  }
+}
+
+updateArrows();
+
+const iframes = document.querySelectorAll('iframe');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const iframe = entry.target;
     const src = iframe.src;
 
-    // Add autoplay param (only if not already present)
-    if (!src.includes('autoplay=1')) {
-      const newSrc = src.includes('?') ? src + '&autoplay=1' : src + '?autoplay=1';
-      iframe.src = newSrc;
-    }
-  }
-
-  // Inicializa
-  updateArrows();
-
-    const iframes = document.querySelectorAll('iframe');
-
-  // Observa visibilidade
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const iframe = entry.target;
-      const src = iframe.src;
-
-      if (!entry.isIntersecting) {
-        iframe.src = updateURLParam(src, 'autoplay', '0');
-      } else {
-        iframes.forEach(el => {
-          if (el !== iframe) {
-            el.src = updateURLParam(el.src, 'autoplay', '0');
-          }
-        });
-        iframe.src = updateURLParam(src, 'autoplay', '1');
-      }
-    });
-  }, { threshold: 0.5 });
-
-  iframes.forEach(iframe => observer.observe(iframe));
-
-  function updateURLParam(url, param, value) {
-    const pattern = new RegExp(`${param}=\\d`);
-    if (pattern.test(url)) {
-      return url.replace(pattern, `${param}=${value}`);
+    if (!entry.isIntersecting) {
+      iframe.src = updateURLParam(src, 'autoplay', '0');
     } else {
-      const connector = url.includes('?') ? '&' : '?';
-      return url + connector + `${param}=${value}`;
+      iframes.forEach(el => {
+        if (el !== iframe) {
+          el.src = updateURLParam(el.src, 'autoplay', '0');
+        }
+      });
+      iframe.src = updateURLParam(src, 'autoplay', '1');
     }
-  }
+  });
+}, { threshold: 0.5 });
 
-  function toggleMute(button) {
-    const iframe = button.parentElement.querySelector('iframe');
-    const src = iframe.src;
-    const isMuted = src.includes('mute=1');
-    iframe.src = updateURLParam(src, 'mute', isMuted ? '0' : '1');
+iframes.forEach(iframe => observer.observe(iframe));
+
+function updateURLParam(url, param, value) {
+  const pattern = new RegExp(`${param}=\\d`);
+  if (pattern.test(url)) {
+    return url.replace(pattern, `${param}=${value}`);
+  } else {
+    const connector = url.includes('?') ? '&' : '?';
+    return url + connector + `${param}=${value}`;
   }
+}
+
+function toggleMute(button) {
+  const iframe = button.parentElement.querySelector('iframe');
+  const src = iframe.src;
+  const isMuted = src.includes('mute=1');
+  iframe.src = updateURLParam(src, 'mute', isMuted ? '0' : '1');
+}

@@ -19,14 +19,14 @@
 <body class="bg-pink-100 text-brown-900">
 
     <div class="flex flex-col items-center mb-6">
-        <!-- Foto de perfil -->
+
         <img src="perfil.jpg" alt="Perfil"
             class="w-20 h-20 rounded-full shadow-md border-2 border-pink-500 hover:scale-105 transition duration-300" />
 
-        <!-- Link Instagram -->
+
         <a href="https://www.instagram.com/bolsas_encantos_baby" target="_blank"
             class="flex items-center mt-2 text-xl font-semibold hover:text-pink-500 transition duration-300">
-            <!-- Ícone Instagram -->
+
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
                 viewBox="0 0 16 16">
                 <path
@@ -55,7 +55,6 @@
         <div id="catalogo" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
     </div>
 
-    <!-- Modal -->
     <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
         <div id="modal-content"
             class="bg-white rounded-2xl shadow-xl overflow-auto flex flex-col items-center p-6 transition-all duration-300 md:h-[100%] relative">
@@ -65,8 +64,24 @@
             <h2 id="modal-nome" class="text-2xl font-bold text-pink-700 mb-2"></h2>
             <p id="modal-medidas" class="text-gray-500 mb-2 text-sm"></p>
             <p id="modal-preco" class="text-lg font-semibold text-pink-600 mb-4"></p>
-            <a id="modal-botao" href="https://api.whatsapp.com/send/?phone=5585986500500&text=Ol%C3%A1%2C%20estava%20dando%20uma%20olhada%20no%20site%20e%20queria%20saber%20mais%20informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0
-" target="_blank" class="bg-pink-500 text-white px-6 py-3 rounded-xl shadow hover:bg-pink-600 transition">
+            <a id="modal-botao"
+                href="https://api.whatsapp.com/send/?phone=5585986500500&text=Ol%C3%A1%2C%20estava%20dando%20uma%20olhada%20no%20site%20e%20queria%20saber%20mais%20informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
+                target="_blank"
+                class="bg-pink-500 text-white px-6 py-3 rounded-xl shadow hover:bg-pink-600 transition flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 
+        1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 
+        7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 
+        6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 
+        6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 
+        1.928 4.66c-.004 3.639-2.961 6.592-6.592 
+        6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 
+        0-.529.247c-.182.198-.691.677-.691 
+        1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 
+        2.992.47.205.84.326 1.129.418.475.152.904.129 
+        1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                </svg>
                 Faça seu pedido no WhatsApp
             </a>
         </div>
@@ -94,22 +109,22 @@
         </h1>
     </div>
     <div class="carousel-container">
-        <!-- Setas -->
+
         <button class="carousel-arrow arrow-left hidden" id="prevArrow">
-            <!-- Ícone esquerda -->
+
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                 <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
             </svg>
         </button>
         <button class="carousel-arrow arrow-right" id="nextArrow">
-            <!-- Ícone direita -->
+
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                 <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
             </svg>
         </button>
 
         <div class="carousel-track" id="carouselTrack">
-            <!-- Slide 1 -->
+
             <div class="carousel-slide">
                 <div class="video-wrapper">
                     <div class="video-cover" onclick="playVideo(this)"
@@ -126,7 +141,7 @@
                 </div>
             </div>
 
-            <!-- Slide 2 -->
+
             <div class="carousel-slide">
                 <div class="video-wrapper">
                     <div class="video-cover" onclick="playVideo(this)"
@@ -143,7 +158,7 @@
                 </div>
             </div>
 
-            <!-- Slide 3 -->
+
             <div class="carousel-slide">
                 <div class="video-wrapper">
                     <div class="video-cover" onclick="playVideo(this)"
@@ -165,14 +180,14 @@
     <footer class="footer bg-pink-100 text-gray-800 mt-10">
         <div class="footer-container max-w-6xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <!-- Empresa -->
+
             <div class="footer-col">
                 <h2 class="text-lg font-bold mb-2">Encantos Baby</h2>
                 <p>CNPJ: 47.707.673/0001-40</p>
                 <p>Fortaleza, CE - Brasil</p>
             </div>
 
-            <!-- Contato -->
+
             <div class="footer-col">
                 <h2 class="text-lg font-bold mb-2">Contato</h2>
                 <p>Telefone: (85) 98650-0500</p>
@@ -180,7 +195,7 @@
                 <p class="hidden">Email: contato@empresa.com</p>
             </div>
 
-            <!-- Redes Sociais -->
+
             <div class="footer-col">
                 <h2 class="text-lg font-bold mb-2">Redes Sociais</h2>
                 <div class="flex gap-3">

@@ -6,7 +6,23 @@ body {
   font-family: "Young Serif", serif;
   text-align: center;
   color: #5c272f !important;
+  margin: 0;
+  padding: 0;
+  background-image: url('bgdesk.jpg');
   background-color: #ffced4 !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background-image: url('bgmob.jpg.png');
+    background-attachment: fixed;
+  }
 }
 
 .text-pink-600 {
@@ -28,7 +44,7 @@ svg.bi.bi-instagram {
   padding-top: 50px;
   padding-bottom: 30px;
   margin-bottom: 0 !important;
-  background-image: linear-gradient(to bottom, #ffffff, #ffced4);
+  background-image: linear-gradient(to bottom, #ffffff, #ffced400);
 }
 
 .text-gray-500 {
@@ -36,7 +52,7 @@ svg.bi.bi-instagram {
 }
 
 div#modal-imagens {
-  max-width: 800px;
+  max-width: 600px;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -158,6 +174,7 @@ div#modal-imagens::-webkit-scrollbar-thumb:hover {
 @media (min-width: 768px) {
   #modal {
     border-radius: 1rem;
+    padding: 40px 0px;
   }
 }
 
@@ -322,4 +339,37 @@ svg.bi.bi-whatsapp {
 
 iframe {
   height: 540px;
+}
+
+a.flex.items-center.mt-2.text-xl.font-semibold.hover\:text-pink-500.transition.duration-300 {
+  color: #ec4899;
+}
+
+a.flex.items-center.mt-2.text-xl.font-semibold.hover\:text-pink-500.transition.duration-300:hover {
+  color: #5c272f;
+}
+
+div#modal-imagens {
+    max-width: 600px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 12px;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #f28ab2 transparent;
+}
+
+div#modal-imagens::-webkit-scrollbar {
+    height: 8px;
+}
+
+div#modal-imagens::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+div#modal-imagens::-webkit-scrollbar-thumb {
+    background-color: #f28ab2;  
+    border-radius: 10px;
 }
