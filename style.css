@@ -187,3 +187,139 @@ button.absolute.top-4.right-6.text-3xl.text-gray-600 {
     height: 100% !important;
   }
 }
+
+svg.bi.bi-instagram {
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+}
+
+svg.bi.bi-whatsapp {
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  height: 80vh;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-slide iframe {
+  width: 100%;
+  max-width: 360px;
+  height: 640px;
+  border: 4px solid #e973a3;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px 0px rgb(0 0 0 / 17%);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 640px;
+}
+
+.video-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.play-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgb(236 72 153);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button svg {
+  fill: white;
+  width: 30px;
+  height: 30px;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 44%;
+  transform: translateY(-50%);
+  background: rgb(236 72 153 / 40%);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-arrow svg {
+  fill: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .carousel-track {
+    transform: none !important;
+    transition: none;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .carousel-slide {
+    min-width: 0;
+    width: 368px !important;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+
+  .carousel-container {
+    height: auto;
+  }
+}
+
+iframe {
+  height: 540px;
+}
