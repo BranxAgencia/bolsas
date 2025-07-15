@@ -5,7 +5,7 @@ img.w-full.h-48.object-cover.rounded-xl.mb-4 {
 body {
   font-family: "Young Serif", serif;
   text-align: center;
-  color: #5c272f;
+  color: #5c272f !important;
   background-color: #ffced4 !important;
 }
 
