@@ -112,6 +112,16 @@ const produtos = [
     ]
   },
   {
+    nome: "Nécessaire tradicional",
+    preco: "R$ 70,00",
+    medidas: "Padrão",
+    imagens: [
+      "products/19 - Nécessaire tradicional/capa.jpg",
+      "products/19 - Nécessaire tradicional/2.jpg",
+      "products/19 - Nécessaire tradicional/3.jpg"
+    ]
+  },  
+  {
     nome: "Porta-mamadeira",
     preco: "R$ 180,00",
     medidas: "Largura 28cm x Altura 23cm",
